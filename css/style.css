@@ -126,6 +126,33 @@ ul {
     font-weight: 900;
 }
 
+/* SVG-іконки */
+.adress-icon {
+    fill: var(--color-hero);
+}
+
+.adress-icon:hover {
+    fill: var(--color-white);
+}
+
+.carousel-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    border: 1px solid var(--color-hero);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--color-hero);
+}
+
+.carousel-button:hover {
+    border: 1px solid var(--color-white);
+    background-color: var(--color-blue);
+    fill: var(--color-white);
+}
+
 /* Header */
 .header-container {
     background-color: rgba(194, 191, 191, 0.5);
@@ -269,6 +296,7 @@ ul {
     font-size: 22px;
     color: var(--color-white);
     line-height: 1.2;
+    color: violet;
 }
 
 /* Footer */
@@ -300,4 +328,12 @@ footer {
 .address-copyright {
     font-size: 13px;
     color: var(--color-copyright);
+}
+
+.footer-adress-icon {
+    fill: var(--color-white);
+}
+
+.footer-adress-icon:hover {
+    stroke        : var(--color-white);
 }
