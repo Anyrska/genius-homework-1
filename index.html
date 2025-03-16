@@ -217,9 +217,34 @@
 
 		<div class="backdrop">
 			<div class="modal">
-			  <button class="modal-btn-close" type="button">X</button>
-			  <h2 class="modal-card-title">Замовити дзвінок</h2>
-			  <p class="why-us-text">Запишіться <span class="modal-accent">безкоштовно</span> та отримайте подарунок</p>
+			    <button class="modal-btn-close" type="button">X</button>
+			    <h2 class="modal-card-title">Замовити дзвінок</h2>
+
+				<div class="modal-container">
+					<p class="modal-card-text">Запишіться <span class="modal-accent">безкоштовно</span> <br>та отримайте подарунок</p>
+					<!-- Форма модального вікна -->
+			    	<form class="modal-form" name="modal-form" autocomplete="off" novalidate>
+						<!-- Поля вводу -->
+						<!-- <label> та <input> ОБОВ'ЯЗКОВО мають бути разом  -->
+					<div class="form-field">
+						<input class="form-input" id="user-name" type="text" name="user-name" required>
+						<label class="form-label" for="user-name">Ваше ім'я та прізвище</label>
+					</div>
+
+					<div class="form-field">
+						<input class="form-input" id="user-tel" type="tel" name="user-tel" required>
+						<label class="form-label" for="user-tel">Ваш номер телефону</label>
+					</div>
+
+					<div class="form-field">
+						<input class="form-input" id="user-email" type="email" name="user-email" required>
+						<label class="form-label" for="user-email">Ваша електронна пошта</label>
+					</div>
+					<!-- Кнопка модального вікна -->
+					<button class="button form-button" type="submit" target="_blank">Записатись безкоштовно</button>
+					<p class="form-terms">Натискаючи на кнопку я погоджуюсь <a class="form-terms-link" href="#">з політикою конфіденційності</a></p>	
+			    	</form>
+				</div>
 			</div>
 		</div>
 

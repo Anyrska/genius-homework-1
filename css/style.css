@@ -240,7 +240,7 @@ h2.section-title {
 
 .hero-button {
     margin-bottom: 14px;
-    padding: 16px 32px        ;
+    padding: 16px 32px;
 }
 
 .small-text {
@@ -500,9 +500,11 @@ h2.section-title {
     right: 0;
     bottom: 0;
     display: flex;
+    z-index: 2;
     justify-content: center;
     align-items: center;
     background-color: rgba(1, 31, 74, 0.4);
+    transition: opacity 0.3s, visibility 0.3s; /* Плавний перехід */
 }
 
 .backdrop.is-hidden {
@@ -512,15 +514,18 @@ h2.section-title {
 }
 
 .modal {
-    width: 720px;
-    height: 680px;
+    max-width: 725px;
+    width: 100%;
+    max-height: 680px;
+    height: 100%;
     background-color: var(--color-hero);
     border-radius: 48px;
     flex-direction: column;
     align-items: center;
     display: flex;
-    padding-top: 42px;
+    padding: 42px 145px;
     position: relative;
+    overflow-y: auto;
 }
 
 .modal-btn-close {
@@ -542,7 +547,75 @@ h2.section-title {
     text-align: center;
 }
 
+.modal-card-text {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 32px;
+}
 
 .modal-accent {
     color: var(--color-blue);
 }
+
+.modal-container {
+    max-width: 310px;
+}
+
+/* Form */
+
+.form-field {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-label {
+    color: var(--color-white);
+    font-size: 13px;
+    position: absolute;
+    top: 18px;
+    left: 33px;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.form-input:focus + .form-label,
+.form-input:valid + .form-label {
+    transform: translate(-40px, -37px);
+    font-style: italic;
+}
+
+.form-input {
+    height: 52px;
+    width: 100%;
+    border: 2px solid var(--color-copyright);
+    border-radius: 32px;
+    background-color: transparent;
+    padding: 18px 33px;
+    color: var(--color-white);
+    font-size: 13px;
+}
+
+.form-input:focus {
+    background-color: var(--color-copyright);
+    outline: none;
+}
+
+.form-terms {
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-copyright);
+    line-height: 1.5;
+}
+
+.form-terms-link {
+    text-transform: none;
+    color: var(--color-copyright);
+    text-underline-offset: 3px;
+}
+
+.form-button {
+    display: block;
+    margin: 0 auto 8px auto;
+}
+
